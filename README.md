@@ -109,12 +109,12 @@ See [example.py](https://github.com/IamLegende7/boxes-tui/blob/main/examples/exa
 
     ```python
     my_menu = tui.Menu(stdscr, 
-                       [("Hello", tui.nothing), ("Quit", quit_app)], 
-                       [([curses.KEY_UP, ord("W"), ord("w")], tui.Menu.move_up),
-                        ([curses.KEY_DOWN, ord("S"), ord("s")], tui.Menu.move_down),
-                        ([10], tui.Menu.select) # (10 = Enter key)
-                       ]
-                    )
+        [("Hello", tui.nothing), ("Quit", quit_app)], 
+        [([curses.KEY_UP, ord("W"), ord("w")], tui.Menu.move_up),
+        ([curses.KEY_DOWN, ord("S"), ord("s")], tui.Menu.move_down),
+        ([10], tui.Menu.select) # (10 = Enter key)
+        ]
+    )
     ```
 
     The default keybindings are:
