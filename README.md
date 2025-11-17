@@ -101,7 +101,32 @@ See [example.py](https://github.com/IamLegende7/boxes-tui/blob/main/examples/exa
 
     ```python
     key = stdsrc.getch()
-    ```    
+    ```
+
+    **Keybinds**
+
+    You can set the Menu's keybinds by passing in a keybinds list:
+
+    ```python
+    my_menu = tui.Menu(stdscr, 
+                       [("Hello", tui.nothing), ("Quit", quit_app)], 
+                       [([curses.KEY_UP, ord("W"), ord("w")], tui.Menu.move_up),
+                        ([curses.KEY_DOWN, ord("S"), ord("s")], tui.Menu.move_down),
+                        ([10], tui.Menu.select) # (10 = Enter key)
+                       ]
+                    )
+    ```
+
+    The default keybindings are:
+
+    ```python
+    [
+        ([curses.KEY_UP], tui.Menu.move_up),
+        ([curses.KEY_DOWN], tui.Menu.move_down),
+        ([10, curses.KEY_RIGHT], tui.Menu.select),
+        ([curses.KEY_BACKSPACE, curses.KEY_LEFT], tui.Menu.back)
+    ]
+    ```
 
     **Returns**
 
