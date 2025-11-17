@@ -24,7 +24,6 @@ def main(stdscr):
     while True:
         # tick the menu and pass in the keypress
         main_menu.tick(key)
-        tui.stdscr.refresh()
         key = tui.stdscr.getch()  # Make shure to run getch() **after** ticking the menu
 
 if __name__ == "__main__":
