@@ -3,6 +3,12 @@
 
 Boxes is a collection of tools for making TUI python projects.
 
+> [!Important]  
+> This version of boxes-tui is deprecated; please use the rewrite: [boxes-tui 3](https://github.com/IamLegende7/boxes-tui/)!
+
+> [!Note]
+> Some of the documentation on this repo is no longer accurate.
+
 ## Dependencies
 
 Boxes uses curses, with comes with python, so nothing must be installed additionally
